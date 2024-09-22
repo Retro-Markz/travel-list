@@ -1,5 +1,5 @@
 .primary-cta {
-  @apply bg-amber-300 py-2 px-12 rounded-full font-bold;
+  @apply bg-amber-300 py-2 px-12 rounded-full font-bold shadow-lg bottom-0;
 }
 
 .primary-cta:hover {
@@ -8,6 +8,14 @@
   background-color: rgb(253 230 138 / var(--tw-bg-opacity)) /* #fde68a */;
 }
 
+.secondary-cta {
+  @apply bg-blue-500 py-2 px-12 rounded-full font-bold text-white shadow-lg;
+}
+
 .input {
-  @apply text-lg rounded-full;
+  @apply text-lg rounded-full px-4;
+}
+
+.input::placeholder {
+  text-align: center;
 }
