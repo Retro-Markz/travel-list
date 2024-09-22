@@ -1,9 +1,16 @@
 import "./App.css";
+import Form from "./components/Form";
+import PackingList from "./components/PackingList";
+import Stats from "./components/Stats";
+import Title from "./components/Title";
 
 function App() {
   return (
     <>
-      <h1 className="text-3xl font-bold underline">Hello world!</h1>
+      <Title />
+      <Form />
+      <PackingList />
+      <Stats />
     </>
   );
 }
