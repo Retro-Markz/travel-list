@@ -4,7 +4,7 @@ const Form = () => {
   const [description, setDescription] = useState("");
   const [quantity, setQuantity] = useState(1);
 
-  function handleSubmimt(e) {
+  function handleSubmit(e) {
     e.preventDefault();
 
     if (!description) return;
@@ -19,7 +19,7 @@ const Form = () => {
   return (
     <form
       className="flex p-8 items-center justify-center flex-col md:flex-row bg-amber-600 gap-2"
-      onSubmit={handleSubmimt}
+      onSubmit={handleSubmit}
     >
       <h3 className="text-lg font-semibold">What do you need for your trip?</h3>
       <select
