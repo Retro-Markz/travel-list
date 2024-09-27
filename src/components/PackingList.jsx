@@ -1,27 +1,8 @@
+/* eslint-disable react/prop-types */
 import Item from "./Item";
 
-const items = [
-  {
-    id: 1,
-    description: "Passport",
-    quantity: 2,
-    packed: false,
-  },
-  {
-    id: 2,
-    description: "Socks",
-    quantity: 12,
-    packed: true,
-  },
-  {
-    id: 3,
-    description: "charger",
-    quantity: 1,
-    packed: false,
-  },
-];
-
-const PackingList = () => {
+// eslint-disable-next-line react/prop-types
+const PackingList = ({ items }) => {
   return (
     <div className="flex flex-col justify-center items-center bg-amber-950 w-screen  h-[50vh] md:h-[70vh] gap-12">
       <ul className="list *:text-amber-200 *:text-2xl *:font-semibold gap-4">
