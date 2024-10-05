@@ -25,7 +25,7 @@ const Form = ({ onAddItems }) => {
         className="flex p-8 items-center justify-center flex-col md:flex-row bg-amber-600 gap-2"
         onSubmit={handleSubmit}
       >
-        <h3 className="text-lg font-semibold">
+        <h3 className="text-2xl font-semibold ">
           What do you need for your trip?
         </h3>
         <select
