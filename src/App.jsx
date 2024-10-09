@@ -6,6 +6,7 @@ import Stats from "./components/Stats";
 import Title from "./components/Title";
 
 function App() {
+  // =========== Functions
   const [items, setItems] = useState([]);
 
   function handleAddItems(item) {
@@ -15,11 +16,25 @@ function App() {
   function handleDeleteItem(id) {
     setItems((items) => items.filter((item) => item.id !== id));
   }
+
+  function handleToggleItem(id) {
+    setItems((items) =>
+      items.map((item) =>
+        item.id === id ? { ...item, packed: !item.packed } : item
+      )
+    );
+  }
+
+  // ========== app
   return (
     <>
       <Title />
       <Form onAddItems={handleAddItems} />
-      <PackingList items={items} onDeleteItem={handleDeleteItem} />
+      <PackingList
+        items={items}
+        onDeleteItem={handleDeleteItem}
+        ontoggleItem={handleToggleItem}
+      />
       <Stats />
     </>
   );
