@@ -3,7 +3,7 @@ import { useState } from "react";
 import Item from "./Item";
 
 // eslint-disable-next-line react/prop-types
-const PackingList = ({ items, onDeleteItem, ontoggleItem }) => {
+const PackingList = ({ items, onDeleteItem, ontoggleItem, onClearList }) => {
   const [sortBy, setSortBy] = useState("input");
   let sortedItems;
 
@@ -42,7 +42,9 @@ const PackingList = ({ items, onDeleteItem, ontoggleItem }) => {
           <option value="description">Sort by description</option>
           <option value="packed">Sort by packed status</option>
         </select>
-        <button className="primary-cta">Clear List</button>
+        <button onClick={onClearList} className="primary-cta">
+          Clear List
+        </button>
       </div>
     </div>
   );
